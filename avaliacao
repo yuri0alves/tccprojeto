@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="avaliacao.css">
+    <title>avalie o site</title>
+</head>
+<body>
+    <div id="containeravaliacao">
+        <h1>Avalie esse site</h1>
+        <div class="rating">
+            <span class="star" onmouseover="mouseOver(1)" onmouseleave="mouseLeave(1)" onclick="rate(1)">&#9734;</span>
+            <span class="star" onmouseover="mouseOver(2)" onmouseleave="mouseLeave(2)" onclick="rate(2)">&#9734;</span>
+            <span class="star" onmouseover="mouseOver(3)" onmouseleave="mouseLeave(3)" onclick="rate(3)">&#9734;</span>
+            <span class="star" onmouseover="mouseOver(4)" onmouseleave="mouseLeave(4)" onclick="rate(4)">&#9734;</span>
+            <span class="star" onmouseover="mouseOver(5)" onmouseleave="mouseLeave(5)" onclick="rate(5)">&#9734;</span>
+        </div>
+        
+        <!-- Movendo o gif para ficar ao lado das estrelas -->
+        <div class="anime-character" id="animeCharacter"></div>
+    
+        <!-- Adicionando a caixa de entrada -->
+        <textarea id="opinion" placeholder="Digite sua opinião" oninput="updateCharCount()"></textarea>
+        <div id="charCount">0/500</div>
+        <div id="charLimitMessage">Você excedeu o limite de 500 caracteres!</div>
+    
+        <button onclick="submitOpinion()">Enviar Opinião</button>
+    </div>
+    <script src="scriptavaliacao.js"></script>
+</body>
+</html>
