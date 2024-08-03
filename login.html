@@ -1,0 +1,292 @@
+
+Conversa aberta. Uma mensagem não lida.
+
+Pular para o conteúdo
+Como usar o E-mail de IFRN com leitores de tela
+
+4 de 1.820
+(sem assunto)
+Caixa de entrada
+
+Roberto paixão do nascimento filho
+seg., 22 de abr., 20:02 (há 2 dias)
+para mim
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login e Cadastro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-premium%2Fuma-ilustracao-dos-desenhos-animados-de-uma-biblioteca-com-uma-estante-e-um-teto-com-um-fundo-do-ceu_45959231.htm&psig=AOvVaw1stqgYvlmf2xEojQXE3cSE&ust=1713897743568000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPjok-i81oUDFQAAAAAdAAAAABAE');
+      background-size: cover;
+    }
+
+    .form-container {
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px; /* Cantos arredondados */
+      background-color: rgba(255, 255, 255, 0.7); /* Fundo branco com transparência */
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); /* Sombra suave */
+      text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .form-group {
+      margin-bottom: 20px; /* Espaçamento maior entre os campos */
+      position: relative; /* Posição relativa para o ícone de olho */
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #f9009e; /* Cor rosa */
+      font-weight: bold;
+    }
+
+    input {
+      width: calc(100% - 40px); /* Largura ajustada para incluir o ícone de olho */
+      padding: 10px; /* Maior espaço interno */
+      border: 1px solid #f9009e; /* Borda rosa */
+      border-radius: 5px;
+      color: #f9009e; /* Cor rosa para o texto digitado */
+      position: relative; /* Permitir posicionar o ícone */
+    }
+
+    .eye-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .eye-icon img {
+      width: 20px; /* Tamanho do ícone de olho */
+      height: auto;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #f9009e; /* Cor de botão rosa */
+      color: #fff; /* Cor de texto branco */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s; /* Transição suave de cor */
+    }
+
+    button:hover {
+      background-color: #dd007f; /* Cor de botão rosa mais escura ao passar o mouse */
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 5px; /* Espaçamento acima da mensagem de erro */
+      display: none; /* Inicialmente oculta */
+    }
+
+    h2 {
+      color: #f9009e; /* Cor de texto rosa */
+      text-align: center;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px; /* Espaçamento acima do link de login */
+    }
+
+    .login-link a {
+      color: #f9009e; /* Cor rosa para o link */
+      text-decoration: none; /* Remover sublinhado */
+    }
+
+    .login-link a:hover {
+      text-decoration: underline; /* Sublinhar ao passar o mouse */
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container" id="login-form">
+    <h2>Login</h2>
+    <form id="login-form-inner">
+      <div class="form-group">
+        <label for="login-username">E-mail:</label>
+        <input type="email" id="login-username" name="login-username" required>
+      </div>
+      <div class="form-group">
+        <label for="login-password">Senha:</label>
+        <div class="input-with-icon">
+          <input type="password" id="login-password" name="login-password" required>
+          <div class="eye-icon">
+            <img src="https://img.icons8.com/material-rounded/24/000000/hide.png" class="closed-eye" onclick="togglePasswordVisibility('login-password')">
+            <img src="https://img.icons8.com/material-rounded/24/000000/visible.png" class="open-eye" onclick="togglePasswordVisibility('login-password')" style="display: none;">
+          </div>
+        </div>
+      </div>
+      <button type="submit">Entrar</button>
+    </form>
+    <p id="login-error-message" class="error-message"></p>
+    <div class="login-link">
+      <a href="#" onclick="toggleForm(event)">Não tem uma conta? Cadastre-se aqui</a>
+    </div>
+  </div>
+
+  <div class="form-container" id="signup-form" style="display: none;">
+    <h2>Cadastre-se</h2>
+    <form id="signup-form-inner">
+      <div class="form-group">
+        <label for="signup-first-name">Nome:</label>
+        <input type="text" id="signup-first-name" name="signup-first-name" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-last-name">Sobrenome:</label>
+        <input type="text" id="signup-last-name" name="signup-last-name" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-email">E-mail:</label>
+        <input type="email" id="signup-email" name="signup-email" required>
+        <p id="email-error-message" class="error-message" style="margin-top: 5px; display: none;">Por favor, insira um e-mail válido.</p>
+      </div>
+      <div class="form-group">
+        <label for="signup-password">Senha:</label>
+        <div class="input-with-icon">
+          <input type="password" id="signup-password" name="signup-password" required>
+          <p id="weak-password-message" class="error-message" style="margin-top: 5px; display: none;">A senha deve ter pelo menos 8 caracteres, incluindo números e letras.</p>
+          <div class="eye-icon">
+            <img src="https://img.icons8.com/material-rounded/24/000000/hide.png" class="closed-eye" onclick="togglePasswordVisibility('signup-password')">
+            <img src="https://img.icons8.com/material-rounded/24/000000/visible.png" class="open-eye" onclick="togglePasswordVisibility('signup-password')" style="display: none;">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="signup-confirm-password">Confirmar Senha:</label>
+        <div class="input-with-icon">
+          <input type="password" id="signup-confirm-password" name="signup-confirm-password" required>
+          <div class="eye-icon">
+            <img src="https://img.icons8.com/material-rounded/24/000000/hide.png" class="closed-eye" onclick="togglePasswordVisibility('signup-confirm-password')">
+            <img src="https://img.icons8.com/material-rounded/24/000000/visible.png" class="open-eye" onclick="togglePasswordVisibility('signup-confirm-password')" style="display: none;">
+          </div>
+        </div>
+      </div>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p id="signup-error-message" class="error-message"></p>
+    <div class="login-link">
+      <a href="#" onclick="toggleForm(event)">Já tem uma conta? Faça login aqui</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm(event) {
+      event.preventDefault();
+      var loginForm = document.getElementById('login-form');
+      var signupForm = document.getElementById('signup-form');
+
+      loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+      signupForm.style.display = signupForm.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function togglePasswordVisibility(inputId) {
+      var passwordInput = document.getElementById(inputId);
+      var openEye = passwordInput.parentNode.querySelector('.eye-icon .open-eye');
+      var closedEye = passwordInput.parentNode.querySelector('.eye-icon .closed-eye');
+      
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        openEye.style.display = 'block'; // Mostrar olho aberto
+        closedEye.style.display = 'none'; // Esconder olho fechado
+      } else {
+        passwordInput.type = 'password';
+        openEye.style.display = 'none'; // Esconder olho aberto
+        closedEye.style.display = 'block'; // Mostrar olho fechado
+      }
+    }
+
+    document.getElementById('login-form-inner').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var username = document.getElementById('login-username').value;
+      var password = document.getElementById('login-password').value;
+
+      // Aqui você pode adicionar a lógica para autenticar o usuário
+      // Por exemplo, enviar os dados para um servidor para verificar as credenciais
+
+      // Neste exemplo, apenas verificamos se o e-mail inserido é "user@example.com" e a senha é "password"
+      if (username !== 'user@example.com') {
+        document.getElementById('email-not-found-message').style.display = 'block';
+        return;
+      } else {
+        document.getElementById('email-not-found-message').style.display = 'none';
+      }
+
+      if (username === 'user@example.com' && password === 'password') {
+        // Login bem-sucedido
+        alert('Login bem-sucedido!');
+      } else {
+        // Senha incorreta
+        document.getElementById('login-error-message').innerText = 'Senha incorreta.';
+        document.getElementById('login-error-message').style.display = 'block';
+      }
+    });
+
+    document.getElementById('signup-form-inner').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var firstName = document.getElementById('signup-first-name').value;
+      var lastName = document.getElementById('signup-last-name').value;
+      var email = document.getElementById('signup-email').value;
+      var password = document.getElementById('signup-password').value;
+      var confirmPassword = document.getElementById('signup-confirm-password').value;
+
+      // Verificando se o e-mail é válido
+      if (!isValidEmail(email)) {
+        document.getElementById('email-error-message').style.display = 'block';
+        return;
+      } else {
+        document.getElementById('email-error-message').style.display = 'none';
+      }
+
+      // Verificando se a senha atende aos requisitos mínimos
+      if (!isValidPassword(password)) {
+        document.getElementById('weak-password-message').style.display = 'block';
+        return;
+      } else {
+        document.getElementById('weak-password-message').style.display = 'none';
+      }
+
+      // Verificando se as senhas coincidem
+      if (password !== confirmPassword) {
+        document.getElementById('password-match-message').style.display = 'block';
+        return;
+      } else {
+        document.getElementById('password-match-message').style.display = 'none';
+      }
+
+      // Aqui você pode adicionar a lógica para processar o formulário de cadastro
+      // Por exemplo, enviar os dados para um servidor para registro no banco de dados
+
+      // Neste exemplo, apenas exibimos um alerta com os dados inseridos
+      alert('Nome: ' + firstName + ' ' + lastName + '\nE-mail: ' + email + '\nSenha: ' + password);
+    });
+
+    // Função para validar o formato do e-mail
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Função para validar a senha
+    function isValidPassword(password) {
+      // A senha deve ter pelo menos 8 caracteres, incluindo números e letras
+      return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password);
+    }
+  </script>
+</body>
+</html>
+
