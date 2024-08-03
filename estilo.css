@@ -5,6 +5,16 @@ body {
     background-color: #f4f4f4;
 }
 
+#links {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+
+i {
+    margin: 8px;
+}
+
 a {
     text-decoration: none;
     cursor: pointer;
@@ -17,7 +27,7 @@ a:hover {
 }
 
 p {
-    margin-left: 100px;
+    margin-left: 40px;
 }
 
 .container {
@@ -96,3 +106,4 @@ button:hover {
     background-color: #e977bd;
     color: #ffffff;
 }
+
