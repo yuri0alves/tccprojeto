@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>leitores iniciantes</title>
+</head>
+<body>
+    <div id="titulo"><h1 align="center">Acervo pra leitores iniciantes</h1></div>
+    <a href="acervobr.html"><p>acervo para autores brasileiros</p></a>
+    <a href="acervoestrangeiros.html"><p>acervo para autores estrangeiros</p></a>
+    <form id="searchForm">
+        <label for="genreSelect">Selecione o Gênero:</label>
+        <select id="genreSelect">
+            <option value="" disabled selected>Selecione um gênero</option>
+            <option value="fantasy">Fantasia</option>
+            <option value="mystery">Mistério</option>
+            <option value="romance">Romance</option>
+            <option value="horror">Terror</option>
+            <option value="children">Infantil</option>
+            <option value="action">Ação</option>
+            <option value="drama">Drama</option>
+        </select>
+        <button type="submit">Consultar Livros</button>
+    </form>
+    <div id="results"></div>  
+
+    <script src="scriptprainiciantes.js"></script>
+</body>
+</html>

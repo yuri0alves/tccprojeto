@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Autores estrangeiros</title>
+</head>
+<body>
+    <div id="titulo"><h1 align="center">Acervo de livos de autores estrangeiros</h1></div>
+    <a href="acervobr.html"><p>acervo para autores brasileiros</p></a>
+    <a href="acervoiniciantes.html"><p>acervo para leitores iniciantes</p></a>
+    <label for="searchAuthor"><strong>Autor:</strong></label>
+    <select id="searchAuthor">
+        <option value="">Selecione um autor</option>
+        <option value="C.S. Lewis">C.S. Lewis</option>
+        <option value="J.R.R. Tolkien">J.R.R. Tolkien</option>
+        <option value="Mo Yan">Mo Yan</option>
+        <option value="Jojo Moyes">Jojo Moyes</option>
+        <option value="Markus Zusak">Markus Zusak</option>
+        <option value="Stephen King">Stephen King</option>
+        <option value="J.K. Rowling">J.K. Rowling</option>
+        <option value="George R.R. Martin">George R.R. Martin</option>
+        <option value="Agatha Christie">Agatha Christie</option>
+        <option value="Haruki Murakami">Haruki Murakami</option>
+        <option value="William Shakespeare">William Shakespeare</option>
+        <option value="Friedrich Nietzsche">Friedrich Nietzsche</option>
+        <option value="Edgar Allan Poe">Edgar Allan Poe</option>
+        <option value="George Orwell">George Orwell</option>
+        <option value="Fiodor Dostoiévski">Fiodor Dostoiévski</option>
+        <option value="Gabriel García Márquez">Gabriel García Márquez</option>
+        <option value="Ernest Hemingway">Ernest Hemingway</option>
+        <option value="Leo Tolstoy">Leo Tolstoy</option>
+        <option value="Franz Kafka">Franz Kafka</option>
+        <option value="Arthur Conan Doyle">Arthur Conan Doyle</option>
+        <option value="Charles Dickens">Charles Dickens</option>
+        <option value="H.G. Wells">H.G. Wells</option>
+        <option value="Bram Stoker">Bram Stoker</option>
+        <option value="Jules Verne">Jules Verne</option>
+        <option value="Albert Camus">Albert Camus</option>
+        <option value="Jorge Luis Borges">Jorge Luis Borges</option>
+        <option value="H.P. Lovecraft">H.P. Lovecraft</option>
+        <option value="Aldous Huxley">Aldous Huxley</option>
+        <option value="Kurt Vonnegut">Kurt Vonnegut</option>
+        <option value="Isaac Asimov">Isaac Asimov</option>
+        <option value="Cormac McCarthy">Cormac McCarthy</option>
+        <option value="Margaret Atwood">Margaret Atwood</option>
+        <option value="John Steinbeck">John Steinbeck</option>
+        <option value="Victor Hugo">Victor Hugo</option>
+        <option value="Ray Bradbury">Ray Bradbury</option>
+        <option value="Philip K. Dick">Philip K. Dick</option>
+        <option value="William Faulkner">William Faulkner</option>
+        <option value="Harper Lee">Harper Lee</option>
+        <option value="D.H. Lawrence">D.H. Lawrence</option>
+        <option value="Toni Morrison">Toni Morrison</option>
+        <option value="Vladimir Nabokov">Vladimir Nabokov</option>
+        <option value="Sylvia Plath">Sylvia Plath</option>
+        <option value="Walt Whitman">Walt Whitman</option>
+        <option value="Héctor Abad Faciolince">Héctor Abad Faciolince</option>
+        <option value="Chimamanda Ngozi Adichie">Chimamanda Ngozi Adichie</option>
+        <option value="Louisa May Alcott">Louisa May Alcott</option>
+        <option value="Julia Alvarez">Julia Alvarez</option>
+        <option value="Isabel Allende">Isabel Allende</option>
+        <option value="Kenzaburō Ōe">Kenzaburō Ōe</option>
+        <option value="Dante Alighieri">Dante Alighieri</option>
+        <option value="Hans Christian Andersen">Hans Christian Andersen</option>
+        <option value="Maya Angelou">Maya Angelou</option>
+        <option value="W.H. Auden">W.H. Auden</option>
+        <option value="Jane Austen">Jane Austen</option>
+        <option value="Paul Auster">Paul Auster</option>
+        <option value="Beryl Bainbridge">Beryl Bainbridge</option>
+        <option value="Honore de Balzac">Honore de Balzac</option>
+        <option value="Pat Barker">Pat Barker</option>
+        <option value="John Barth">John Barth</option>
+        <option value="Simone de Beauvoir">Simone de Beauvoir</option>
+        <option value="Samuel Beckett">Samuel Beckett</option>
+        <option value="Saul Bellow">Saul Bellow</option>
+        <option value="Giorgio Bassani">Giorgio Bassani</option>
+        <option value="Richard Brautigan">Richard Brautigan</option>
+        <option value="John Green">John Green</option>
+        <!-- Adicione mais autores aqui -->
+    </select>               
+    <input type="text" id="customAuthor" placeholder="Digite o nome do autor">
+                    
+                
+    <label for="searchGenre"><strong>Gênero:</strong></label>
+    <select id="searchGenre">
+        <option value="">Selecione um Gênero</option>
+        <option value="Ficção">Ficção</option>
+        <option value="Suspense">Suspense</option>
+        <option value="Romance">Romance</option>
+        <option value="Aventura">Aventura</option>
+        <option value="Mistério">Mistério</option>
+        <option value="Terror">Terror</option>
+        <option value="Fantasia">Fantasia</option>
+        <!-- Adicione mais gêneros aqui -->
+    </select>
+                
+    <input type="number" id="recommendationQuantity" min="1" max="5" placeholder="Número máximo de recomendações">
+    <button onclick="recommendBooks()">Buscar Livro(s)</button>
+    <div id="results"></div>  
+
+    <script src="scriptacervoestrangeiro.js"></script>
+</body>
+</html>

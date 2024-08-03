@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #e977bd;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #fa49ad;
+}
+
+p {
+    margin-left: 100px;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    width: 90%;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 100px;
+    background-color: #e977bd;
+    color:#fff;
+}
+
+select, button {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 89%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+input[type="number"] {
+    width: 5%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+button {
+    background-color: #e977bd;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e977bd;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#results div {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+#results img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#titulo {
+    background-color: #e977bd;
+    color: #ffffff;
+}

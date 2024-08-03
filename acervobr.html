@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendação de Livros de Autores brasileiros</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="titulo"><h1 align="center">Acervo de livos de autores brasileiros</h1></div>
+    <a href="acervoestrangeiros.html"><p>acervo para autores estrangeiros</p></a>
+    <a href="acervoiniciantes.html"><p>acervo para leitores iniciantes</p></a>
+    <label for="searchAuthor">Autor:</label>
+    <select id="searchAuthor">
+        <option value="">Selecione um autor</option>
+        <option value="Machado de Assis">Machado de Assis</option>
+        <option value="Clarice Lispector">Clarice Lispector</option>
+        <option value="Paulo Coelho">Paulo Coelho</option>
+        <option value="Jorge Amado">Jorge Amado</option>
+        <option value="Mário de Andrade">Mário de Andrade</option>
+        <option value="Monteiro Lobato">Monteiro Lobato</option>
+        <option value="Rubem Fonseca">Rubem Fonseca</option>
+        <option value="Érico Veríssimo">Érico Veríssimo</option>
+        <option value="Lima Barreto">Lima Barreto</option>
+        <option value="Graciliano Ramos">Graciliano Ramos</option>
+        <option value="Carlos Drummond de Andrade">Carlos Drummond de Andrade</option>
+        <option value="Vinícius de Moraes">Vinícius de Moraes</option>
+        <option value="Fernando Pessoa">Fernando Pessoa</option>
+        <option value="Aluísio de Azevedo">Aluísio de Azevedo</option>
+        <option value="Augusto dos Anjos">Augusto dos Anjos</option>
+        <option value="Zuleide Lima">Zuleide Lima</option>
+        <option value="Jorge Luis Borges">Jorge Luis Borges</option>
+        <option value="Délio Galvão">Délio Galvão</option>
+        <option value="Guimarães Rosa">Guimarães Rosa</option>
+        <option value="Cecília Meireles">Cecília Meireles</option>
+        <option value="José de Alencar">José de Alencar</option>
+        <option value="Ariano Suassuna">Ariano Suassuna</option>
+        <option value="João Cabral de Melo Neto">João Cabral de Melo Neto</option>
+        <option value="Manuel Bandeira">Manuel Bandeira</option>
+        <option value="Nelson Rodrigues">Nelson Rodrigues</option>
+        <option value="Euclides da Cunha">Euclides da Cunha</option>
+        <option value="Lygia Fagundes Telles">Lygia Fagundes Telles</option>
+        <option value="João Guimarães Rosa">João Guimarães Rosa</option>
+        <option value="Antonio Callado">Antonio Callado</option>
+        <option value="Aluísio Azevedo">Aluísio Azevedo</option>
+        <option value="Autran Dourado">Autran Dourado</option>
+        <option value="João Ubaldo Ribeiro">João Ubaldo Ribeiro</option>
+        <option value="José Lins do Rego">José Lins do Rego</option>
+        <option value="Mario de Andrade">Mario de Andrade</option>
+        <option value="Murilo Rubião">Murilo Rubião</option>
+        <option value="Osman Lins">Osman Lins</option>
+        <option value="Patativa do Assaré">Patativa do Assaré</option>
+        <option value="Raduan Nassar">Raduan Nassar</option>
+        <option value="Antonio Candido">Antonio Candido</option>
+        <option value="Alfredo Bosi">Alfredo Bosi</option>
+        <option value="Adélia Prado">Adélia Prado</option>
+        <option value="Dalton Trevisan">Dalton Trevisan</option>
+        <option value="Fernando Sabino">Fernando Sabino</option>
+    </select>
+        
+    <input type="text" id="customAuthor" placeholder="Digite o nome do autor">
+    
+    <label for="searchGenre">Gênero:</label>
+    <select id="searchGenre">
+        <option value="">Selecione um Gênero</option>
+        <option value="Ficção">Ficção</option>
+        <option value="Suspense">Suspense</option>
+        <option value="Romance">Romance</option>
+        <option value="Aventura">Aventura</option>
+        <option value="Mistério">Mistério</option>
+        <option value="Terror">Terror</option>
+        <option value="Fantasia">Fantasia</option>
+        <!-- Adicione mais gêneros aqui -->
+    </select>
+
+    <input type="number" id="recommendationQuantity" min="1" max="5" placeholder="Número máximo de recomendações">
+    <button onclick="recommendBooks()">Buscar Livro(s)</button>
+    <div id="results"></div>
+
+    <script src="scriptacervobr.js"></script>
+</body>
+</html>
