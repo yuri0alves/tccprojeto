@@ -1,33 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 1px;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-#links {
-    display: flex;
-    flex-direction: row;
-    margin-left: 100px;
+    background-color: #fff;
 }
 
 i {
-    margin: 8px;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #e977bd;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #fa49ad;
+    margin: 10px;
 }
 
 p {
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 .container {
@@ -43,11 +26,15 @@ p {
 label {
     display: block;
     width: 90%;
-    margin-top: 10px;
+    margin-top: 20px;
     font-weight: bold;
-    margin-left: 100px;
+    margin-left: 6%;
     background-color: #e977bd;
     color:#fff;
+}
+
+#formulario {
+    margin-top: 100px;
 }
 
 select, button {
@@ -56,7 +43,7 @@ select, button {
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-left: 100px;
+    margin-left: 6%;
     cursor: pointer;
 }
 
@@ -64,14 +51,14 @@ input[type="text"] {
     width: 89%;
     padding: 5px;
     margin-top: 5px;
-    margin-left: 100px;
+    margin-left: 6%;
 }
 
 input[type="number"] {
     width: 5%;
     padding: 5px;
     margin-top: 5px;
-    margin-left: 100px;
+    margin-left: 6%;
 }
 
 button {
@@ -83,7 +70,7 @@ button {
 }
 
 button:hover {
-    background-color: #e977bd;
+    background-color: #bc0676;
 }
 
 #results {
@@ -102,8 +89,83 @@ button:hover {
     margin-bottom: 10px;
 }
 
+img {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+}
+
+#perfil {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fac7e6;
+    color: #e977bd;
+    font-weight: bold;
+    margin-top: 30px;
+    width: 250px;
+    height: 300px;
+    justify-content: start;
+    align-items: start;
+    margin-left: 500px;
+    border: 2px solid #bc0676;
+}
+
+#perfil::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 2px; /* Adjust the width of the line */
+    height: 100%;
+    background-color: #bc0676; /* Color of the line */
+    transform: translateX(-50%);
+}
+
+#nome {
+    font-family: 'Arial Narrow Bold';
+    font-size: 25px;
+    color: #bc0676;
+}
+
+#meuacervo {
+    font-family: 'Arial Narrow Bold';
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#meuacervo:hover {
+    color: #bc0676;
+}
+
+
 #titulo {
+    margin-top: 0;
+    padding-top: 0;
     background-color: #e977bd;
     color: #ffffff;
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #bc0676;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fac7e6;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #fa49ad;
 }
 
