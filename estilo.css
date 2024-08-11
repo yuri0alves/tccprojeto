@@ -6,11 +6,12 @@ body {
 }
 
 i {
-    margin: 10px;
+    margin: 8px;
 }
 
 p {
-    margin-left: 30px;
+    margin: 30px;
+    font-family: 'Arial Narrow Bold';
 }
 
 .container {
@@ -75,17 +76,20 @@ button:hover {
 
 #results {
     margin-top: 20px;
+    font-family: cursive;
 }
 
 #results div {
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    padding: 10px;
+    margin-left: 30px;
 }
 
 #results img {
     max-width: 100px;
     height: auto;
     display: block;
+    margin-left: 30px;
     margin-bottom: 10px;
 }
 
@@ -100,49 +104,11 @@ img {
     flex-direction: column;
 }
 
-#perfil {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #fac7e6;
-    color: #e977bd;
-    font-weight: bold;
-    margin-top: 30px;
-    width: 250px;
-    height: 300px;
-    justify-content: start;
-    align-items: start;
-    margin-left: 500px;
-    border: 2px solid #bc0676;
-}
-
-#perfil::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 2px; /* Adjust the width of the line */
-    height: 100%;
-    background-color: #bc0676; /* Color of the line */
-    transform: translateX(-50%);
-}
-
 #nome {
     font-family: 'Arial Narrow Bold';
-    font-size: 25px;
-    color: #bc0676;
+    font-size: 20px;
+    color: #fff;
 }
-
-#meuacervo {
-    font-family: 'Arial Narrow Bold';
-    font-size: 25px;
-    cursor: pointer;
-}
-
-#meuacervo:hover {
-    color: #bc0676;
-}
-
 
 #titulo {
     margin-top: 0;
@@ -155,17 +121,18 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #bc0676;
+    background-color: #e977bd;
+    font-size: 17px;
 }
 
 a {
     text-decoration: none;
     cursor: pointer;
-    color: #fac7e6;
+    color: #fff;
     font-weight: bold;
 }
 
 a:hover {
-    color: #fa49ad;
+    color: #bc0676;
 }
 
